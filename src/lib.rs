@@ -1,3 +1,5 @@
+// o(log n) time | o(log n) space
+
 #[allow(dead_code)]
 pub fn binary_search(array:Vec<i32>, target: i32) -> i32 {
     if array.len() == 1 {
