@@ -1,74 +1,66 @@
-fn main() {
-    println!("Hello, world!");
-}   
-
-fn binary_search(array:Vec<i32>, target: i32) -> i32 {
-    0
-}
-
 #[cfg(test)]
 mod tests {
 
-    use super::*;
+    use binary_search::binary_search;
 
     #[test]
-    fn test_case_1() {
+    fn test_case_01() {
        let array = vec![0, 1, 21, 33, 45, 45, 61, 71, 72, 73];
        let target = 33;
        assert_eq!(binary_search(array, target), 3);
     }
     
     #[test]
-    fn test_case_2() {
+    fn test_case_02() {
        let array = vec![1, 5, 23, 111];
        let target = 111;
        assert_eq!(binary_search(array, target), 3);
     }
 
     #[test]
-    fn test_case_3() {
+    fn test_case_03() {
        let array = vec![1, 5, 23, 111];
        let target = 5;
        assert_eq!(binary_search(array, target), 1);
     }
 
     #[test]
-    fn test_case_4() {
+    fn test_case_04() {
        let array = vec![1, 5, 23, 111];
        let target = 35;
        assert_eq!(binary_search(array, target), -1);
     }
     
     #[test]
-    fn test_case_5() {
+    fn test_case_05() {
        let array = vec![0, 1, 21, 33, 45, 45, 61, 71, 72, 73];
        let target = 0;
        assert_eq!(binary_search(array, target), 0);
     }
 
     #[test]
-    fn test_case_6() {
+    fn test_case_06() {
        let array = vec![0, 1, 21, 33, 45, 45, 61, 71, 72, 73];
        let target = 1;
        assert_eq!(binary_search(array, target), 1);
     }
 
     #[test]
-    fn test_case_7() {
+    fn test_case_07() {
        let array = vec![0, 1, 21, 33, 45, 45, 61, 71, 72, 73];
        let target = 21;
        assert_eq!(binary_search(array, target), 2);
     }
 
     #[test]
-    fn test_case_8() {
+    fn test_case_08() {
        let array = vec![0, 1, 21, 33, 45, 45, 61, 71, 72, 73];
        let target = 45;
-       assert_eq!(binary_search(array, target), 2);
+       assert_eq!(binary_search(array, target), 4);
     }
 
     #[test]
-    fn test_case_9() {
+    fn test_case_09() {
        let array = vec![0, 1, 21, 33, 45, 45, 61, 71, 72, 73];
        let target = 61;
        assert_eq!(binary_search(array, target), 6);
